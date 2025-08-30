@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ollama-free
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: OLLAMA_HOST
+        value: 0.0.0.0
+      - key: OLLAMA_ORIGINS
+        value: "*"
