@@ -11,5 +11,5 @@ EXPOSE 11434
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
   CMD curl -f http://localhost:11434/api/tags || exit 1
 
-# Start Ollama
-CMD ["ollama", "serve"]
+# Start Ollama using shell execution
+CMD ollama serve
